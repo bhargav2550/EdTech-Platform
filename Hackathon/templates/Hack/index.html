@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Hackathons</title>
+  </head>
+  <body>
+    <h1>Hackathon List</h1>
+    <table border="2">
+      <thead>
+        <th>ID</th>
+        <th>Title</th>
+        <th>Description</th>
+        <th>BackGround_Image</th>
+        <th>Hackathon_Image</th>
+        <th>Type</th>
+        <th>Start_date</th>
+        <th>End_date</th>
+        <th>Reward_Prize</th>
+      </thead>
+        {% for Hack in hackathons %}
+      <tr>
+        <td>{{Hack.id}}</td>
+        <td>{{Hack.Title}}</td>
+        <td>{{Hack.Description}}</td>
+        <!--<td>{{Hack.BackGround_Image.url}}</td>
+        <td>{{Hack.Hackathon_Image.url}}</td>-->
+        <td>{{Hack.Type}}</td>
+        <td>{{Hack.Start_date}}</td>
+        <td>{{Hack.End_date}}</td>
+        <td>{{Hack.Reward_Prize}}</td>
+        <td> <a href="/enroll">Enroll</a> </td>
+      </tr>
+      {% endfor %}
+    </table>
+    <a href="/create">create Your Hackathon</a>
+    <a href="/logout">Logout</a>
+  </body>
+</html>
